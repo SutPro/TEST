@@ -1,0 +1,133 @@
+﻿@model Petteys.Models.Customer
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jqueryval")
+@Styles.Render("~/Content/bootstrap-Minty.css")
+@Scripts.Render("~/bundles/modernizr")
+
+
+
+<body style="background-color:#FFE57E;">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="container">
+                <center> <h2>Register</h2> </center>
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="row">
+                    <div class="col">
+                        @Html.LabelFor(model => model.Username, "ชื่อผู้ใช้งาน", htmlAttributes: new { @class = "control-label col-md-10" })
+                        <div class="col">
+                            @Html.EditorFor(model => model.Username, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        @Html.LabelFor(model => model.Password, "รหัสผ่าน", htmlAttributes: new { @class = "control-label col-md-10" })
+                        <div class="col">
+                            @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control", @type = "Password" } })
+                            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        @Html.LabelFor(model => model.ConfirmPassword, "ยืนยันรหัสผ่าน", htmlAttributes: new { @class = "control-label col-md-10" })
+                        <div class="col">
+                            @Html.EditorFor(model => model.ConfirmPassword, new { htmlAttributes = new { @class = "form-control", @type = "Password" } })
+                            @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        @Html.LabelFor(model => model.e_mail, "อีเมล์", htmlAttributes: new { @class = "control-label col-md-10" })
+                        <div class="col">
+                            @Html.EditorFor(model => model.e_mail, new { htmlAttributes = new { @class = "form-control", @type = "email" } })
+                            @Html.ValidationMessageFor(model => model.e_mail, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        @Html.LabelFor(model => model.fistname, "ชื่อ", htmlAttributes: new { @class = "control-label col-md-10" })
+                        <div class="col">
+                            @Html.EditorFor(model => model.fistname, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.fistname, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        @Html.LabelFor(model => model.lastname, "นามสกุล", htmlAttributes: new { @class = "control-label col-md-10" })
+                        <div class="col">
+                            @Html.EditorFor(model => model.lastname, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.lastname, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        @Html.LabelFor(model => model.age, "อายุ", htmlAttributes: new { @class = "control-label col-md-10" })
+                        <div class="col">
+                            @Html.EditorFor(model => model.age, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.age, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        @Html.LabelFor(model => model.sex, "เพศ", htmlAttributes: new { @class = "control-label col-md-10" })
+                        <div class="col">
+                            ชาย
+                            @Html.RadioButtonFor(model => model.sex, new { htmlAttributes = new { @class = "form-control" } })
+                            หญิง
+                            @Html.RadioButtonFor(model => model.sex, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.sex, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        @Html.LabelFor(model => model.brithdate, "วัน/เดือน/ปีเกิด", htmlAttributes: new { @class = "control-label col-md-10" })
+                        <div class="col">
+                            @Html.EditorFor(model => model.brithdate, new { htmlAttributes = new { @class = "form-control", @type = "date" } })
+                            @Html.ValidationMessageFor(model => model.brithdate, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+
+                    <div class="col">
+                        @Html.LabelFor(model => model.Tel, "เบอร์โทรศัพท์", htmlAttributes: new { @class = "control-label col-md-10" })
+                        <div class="col">
+                            @Html.EditorFor(model => model.Tel, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Tel, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                    <div class="row">
+                    <div class="col">
+                        @Html.LabelFor(model => model.address, "ที่อยู่", htmlAttributes: new { @class = "control-label col-md-10" })
+                        <div class="col">
+                            @Html.TextAreaFor(model => model.address, 5, 70, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.address, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                        </div>
+                <br />
+                <div class="row justify-content-center">
+                    <div class="col-md-auto">
+                            <button type="button" class="btn btn-outline-success">Create</button>
+                    </div>
+
+                    <div class="col-md-auto">
+                            <button type="button" class="btn btn-outline-danger" >Cancle</button>
+                    </div>
+                </div>
+            </div>
+        }
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+</body>
+
+

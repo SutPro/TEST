@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PetteyModelStoreContainer" CdmEntityContainer="PetteyEntities">
+    <EntitySetMapping Name="Pet">
+      <EntityTypeMapping TypeName="PetteyModel.Pet">
+        <MappingFragment StoreEntitySet="Pet">
+          <ScalarProperty Name="Product_Id" ColumnName="Product_Id" />
+          <ScalarProperty Name="Customer_id" ColumnName="Customer_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="specices" ColumnName="specices" />
+          <ScalarProperty Name="sex" ColumnName="sex" />
+          <ScalarProperty Name="birthdate" ColumnName="birthdate" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="history" ColumnName="history" />
+          <ScalarProperty Name="images" ColumnName="images" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Popular">
+      <EntityTypeMapping TypeName="PetteyModel.Popular">
+        <MappingFragment StoreEntitySet="Popular">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="product_id" ColumnName="product_id" />
+          <ScalarProperty Name="product_id2" ColumnName="product_id2" />
+          <ScalarProperty Name="product_id3" ColumnName="product_id3" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="point" ColumnName="point" />
+          <ScalarProperty Name="price" ColumnName="price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Product">
+      <EntityTypeMapping TypeName="PetteyModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="product_Id" ColumnName="product_Id" />
+          <ScalarProperty Name="Customer_id" ColumnName="Customer_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="pro_date" ColumnName="pro_date" />
+          <ScalarProperty Name="exp_date" ColumnName="exp_date" />
+          <ScalarProperty Name="brand" ColumnName="brand" />
+          <ScalarProperty Name="detalis" ColumnName="detalis" />
+          <ScalarProperty Name="images" ColumnName="images" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Trainer">
+      <EntityTypeMapping TypeName="PetteyModel.Trainer">
+        <MappingFragment StoreEntitySet="Trainer">
+          <ScalarProperty Name="Product_Id" ColumnName="Product_Id" />
+          <ScalarProperty Name="Customer_id" ColumnName="Customer_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="sex" ColumnName="sex" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="images" ColumnName="images" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customer">
+      <EntityTypeMapping TypeName="PetteyModel.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="User_type" ColumnName="User_type" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="e_mail" ColumnName="e_mail" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="brithdate" ColumnName="brithdate" />
+          <ScalarProperty Name="sex" ColumnName="sex" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="fistname" ColumnName="fistname" />
+          <ScalarProperty Name="ConfirmPassword" ColumnName="ConfirmPassword" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="cus_Id" ColumnName="cus_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customer2">
+      <EntityTypeMapping TypeName="PetteyModel.Customer2">
+        <MappingFragment StoreEntitySet="Customer2">
+          <ScalarProperty Name="images" ColumnName="images" />
+          <ScalarProperty Name="card_no" ColumnName="card_no" />
+          <ScalarProperty Name="id_bank" ColumnName="id_bank" />
+          <ScalarProperty Name="name_bank" ColumnName="name_bank" />
+          <ScalarProperty Name="cus_bank" ColumnName="cus_bank" />
+          <ScalarProperty Name="cus_name" ColumnName="cus_name" />
+          <ScalarProperty Name="Customer_id" ColumnName="Customer_id" />
+          <ScalarProperty Name="Cus_Id2" ColumnName="Cus_Id2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Order_details">
+      <EntityTypeMapping TypeName="PetteyModel.Order_details">
+        <MappingFragment StoreEntitySet="Order_details">
+          <ScalarProperty Name="Sub_total" ColumnName="Sub_total" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="Product_id3" ColumnName="Product_id3" />
+          <ScalarProperty Name="Product_id2" ColumnName="Product_id2" />
+          <ScalarProperty Name="Product_id" ColumnName="Product_id" />
+          <ScalarProperty Name="orders_id" ColumnName="orders_id" />
+          <ScalarProperty Name="Order_details_id" ColumnName="Order_details_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="PetteyModel.Orders">
+        <MappingFragment StoreEntitySet="Orders">
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Order_status" ColumnName="Order_status" />
+          <ScalarProperty Name="ship_date" ColumnName="ship_date" />
+          <ScalarProperty Name="order_date" ColumnName="order_date" />
+          <ScalarProperty Name="total" ColumnName="total" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="cus_id2" ColumnName="cus_id2" />
+          <ScalarProperty Name="cus_id" ColumnName="cus_id" />
+          <ScalarProperty Name="Product_id3" ColumnName="Product_id3" />
+          <ScalarProperty Name="Product_id2" ColumnName="Product_id2" />
+          <ScalarProperty Name="Product_id" ColumnName="Product_id" />
+          <ScalarProperty Name="order_Id" ColumnName="order_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

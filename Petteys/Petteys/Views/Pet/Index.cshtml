@@ -1,0 +1,201 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/content/Index.css">
+    @Styles.Render("~/Content/Index.css")
+    @Scripts.Render("~/bundles/modernizr")
+    <title>IndexPet</title>
+
+</head>
+<body>
+    <br /><br /><br />
+
+    <section id="team" class="wow fadeInUp">
+        <div class="row">
+            <div class="col-md-3 bg-primary disabled">
+                <br /><br />
+                <div class="dropdown" align="center">
+                    <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" @*aria-haspopup="true" aria-expanded="false"*@ data-hover="dropdown">
+                        สัตว์เลี้ยง
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">หมา</a>
+                        <a class="dropdown-item" href="#">แมว</a>
+                        <a class="dropdown-item" href="#">นก</a>
+                        <a class="dropdown-item" href="#">กระต่าย</a>
+                        <a class="dropdown-item" href="#">หนู</a>
+                        <a class="dropdown-item" href="#">งู</a>
+                    </div>
+                    @*.dropdown:hover>.dropdown-menu {
+                        display: block;
+                        }
+
+                        .dropdown>.dropdown-toggle:active {
+                        /*Without this, clicking will make it sticky*/
+                        pointer-events: none;
+                        }*@
+
+
+
+                </div>
+                <br /><br /><br />
+                <div class="dropdown" align="center">
+                    <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" @*aria-haspopup="true" aria-expanded="false"*@ data-hover="dropdown">
+                        อาหาร/อุปกรณ์
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">ของเล่นสำหรับสัตว์เลี้ยง</a>
+                        <a class="dropdown-item" href="#">อาหาร</a>
+                        <a class="dropdown-item" href="#">อุปกรณ์ทำความสะอาดสัตว์เลี้ยง</a>
+                    </div>
+                    @*.dropdown:hover>.dropdown-menu {
+                        display: block;
+                        }
+
+                        .dropdown>.dropdown-toggle:active {
+                        /*Without this, clicking will make it sticky*/
+                        pointer-events: none;
+                        }*@
+
+                </div>
+                <br /><br /><br />
+                <div class="dropdown" align="center">
+                    <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" @*aria-haspopup="true" aria-expanded="false"*@ data-hover="dropdown">
+                        คอร์สเทรนสัตว์เลี้ยง
+                    </button>
+
+                </div>
+                <br /><br /><br />
+            </div>
+
+
+            <div class="col-md-9 bg-light disabled">
+                <br />
+                <h3>รายการสินค้า</h3>
+
+                @*<h2>รายการสินค้า</h2>
+                        <br />
+                        <div class="col-lg-3 col-md-6">
+                            <div class="member">
+                                <div class="pic"><img class="rounded" src="~/Content/images/n.jpg"></div>
+                                <div class="details">
+                                    <h4>B6070601<br />กฤษดา เจนประโคน</h4>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>*@
+
+                @*<div class="col-lg-9">*@
+                <div class="row">
+
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card mh-100">
+                            <a href="#"><img class="card-img-top" src="~/Content/images/koratcat.jpg" width="700px;" height="250px;"></a>
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    <a href="#">แมวสีสวาด</a>
+                                </h4>
+                                <h5>8,000 ฿</h5>
+                                <p class="card-text">แมวสีสวาดราคาแบ่งกันเลี้ยง ขายเป็นคอก</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card mh-100">
+                            <a href="#"><img class="card-img-top" src="~/Content/images/koratcat.jpg" width="700px;" height="250px;"></a>
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    <a href="#">Item Two</a>
+                                </h4>
+                                <h5>$24.99</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card mh-100">
+                            <a href="#"><img class="card-img-top" src="~/Content/images/koratcat.jpg" width="700px;" height="250px;" alt=""></a>
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    <a href="#">Item Three</a>
+                                </h4>
+                                <h5>$24.99</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100">
+                            <a href="#"><img class="card-img-top" src="~/Content/images/koratcat.jpg" width="700px;" height="250px;" alt=""></a>
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    <a href="#">Item Four</a>
+                                </h4>
+                                <h5>$24.99</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card mh-100">
+                            <a href="#"><img class="card-img-top" src="~/Content/images/koratcat.jpg" width="700px;" height="250px;" alt=""></a>
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    <a href="#">Item Five</a>
+                                </h4>
+                                <h5>$24.99</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card mh-100">
+                            <a href="#"><img class="card-img-top" src="~/Content/images/koratcat.jpg" width="700px;" height="250px;" alt=""></a>
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    <a href="#">Item Six</a>
+                                </h4>
+                                <h5>$24.99</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.row -->
+
+            </div>
+            <!-- /.col-lg-9 -->
+
+        </div>
+        <!-- /.row -->
+
+
+
+
+    </section>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+</body>
+</html>

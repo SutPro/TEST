@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    @Styles.Render("~/Content/style.css")
+}
+<head>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <br /><br /><br /><br /><br /><br />
+    <center>
+        <div class="container btn btn-light" style="width:450px;height:230px" align="center">
+
+            <br />
+            <div class="row">
+                <div class="col">
+                    <label for="staticEmail">ชื่อผู้ใช้งาน</label>
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" id="inputPassword" placeholder="Username" style="width:350px;">
+                </div>
+            </div>
+
+            <br />
+            <div class="row">
+                <div class="col">
+                    <label for="staticEmail">รหัสผ่าน</label>
+                </div>
+                <div class="col">
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Password" style="width:350px;">
+                </div>
+            </div>
+
+            <div class="w3-container" align="right" ">
+                <label><a href="https://www.w3schools.com/html/">ลืมรหัสผ่าน?</a></label>
+            </div>
+
+            <div class="row btn btn" align="center">
+                <form class="form-inline my-5 my-lg-0">
+                    <br />
+                    <button class="btn btn-dark my-5 my-sm-0" type="submit" style="width:120px;height:38px">
+                        เข้าสู่ระบบ
+                    </button>
+                    &nbsp;&nbsp;
+                    <button class="btn btn-dark my-5 my-sm-0" type="submit" style="width:120px;height:38px">
+                        สมัครสมาชิก
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </center>
+
+    <br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br />
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+</body>
+
+

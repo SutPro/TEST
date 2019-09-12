@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PetteyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="cus_Id" />
+    </Key>
+    <Property Name="cus_Id" Type="int" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="ConfirmPassword" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="fistname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="lastname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="sex" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="brithdate" Type="date" Nullable="false" />
+    <Property Name="age" Type="int" Nullable="false" />
+    <Property Name="Tel" Type="nvarchar" MaxLength="13" Nullable="false" />
+    <Property Name="e_mail" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="address" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="User_type" Type="nvarchar" MaxLength="6" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Customer2">
+    <Key>
+      <PropertyRef Name="Cus_Id2" />
+    </Key>
+    <Property Name="Cus_Id2" Type="int" Nullable="false" />
+    <Property Name="Customer_id" Type="int" Nullable="false" />
+    <Property Name="cus_name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="cus_bank" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="name_bank" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="id_bank" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="card_no" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="images" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Order_details">
+    <Key>
+      <PropertyRef Name="Order_details_id" />
+    </Key>
+    <Property Name="Order_details_id" Type="int" Nullable="false" />
+    <Property Name="orders_id" Type="int" Nullable="false" />
+    <Property Name="Product_id" Type="int" Nullable="false" />
+    <Property Name="Product_id2" Type="int" Nullable="false" />
+    <Property Name="Product_id3" Type="int" Nullable="false" />
+    <Property Name="amount" Type="int" />
+    <Property Name="Sub_total" Type="money" />
+  </EntityType>
+  <EntityType Name="Orders">
+    <Key>
+      <PropertyRef Name="order_Id" />
+    </Key>
+    <Property Name="order_Id" Type="int" Nullable="false" />
+    <Property Name="Product_id" Type="int" Nullable="false" />
+    <Property Name="Product_id2" Type="int" Nullable="false" />
+    <Property Name="Product_id3" Type="int" Nullable="false" />
+    <Property Name="cus_id" Type="int" Nullable="false" />
+    <Property Name="cus_id2" Type="int" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="price" Type="money" Nullable="false" />
+    <Property Name="amount" Type="money" Nullable="false" />
+    <Property Name="total" Type="money" Nullable="false" />
+    <Property Name="order_date" Type="date" Nullable="false" />
+    <Property Name="ship_date" Type="date" Nullable="false" />
+    <Property Name="Order_status" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Remark" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="image" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Pet">
+    <Key>
+      <PropertyRef Name="Product_Id" />
+    </Key>
+    <Property Name="Product_Id" Type="int" Nullable="false" />
+    <Property Name="Customer_id" Type="int" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="specices" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="sex" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="birthdate" Type="date" Nullable="false" />
+    <Property Name="age" Type="int" Nullable="false" />
+    <Property Name="price" Type="money" Nullable="false" />
+    <Property Name="history" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="images" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Popular">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="product_id" Type="int" Nullable="false" />
+    <Property Name="product_id2" Type="int" Nullable="false" />
+    <Property Name="product_id3" Type="int" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="point" Type="int" Nullable="false" />
+    <Property Name="price" Type="money" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="product_Id" />
+    </Key>
+    <Property Name="product_Id" Type="int" Nullable="false" />
+    <Property Name="Customer_id" Type="int" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="price" Type="money" Nullable="false" />
+    <Property Name="pro_date" Type="date" Nullable="false" />
+    <Property Name="exp_date" Type="date" Nullable="false" />
+    <Property Name="brand" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="detalis" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="images" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Trainer">
+    <Key>
+      <PropertyRef Name="Product_Id" />
+    </Key>
+    <Property Name="Product_Id" Type="int" Nullable="false" />
+    <Property Name="Customer_id" Type="int" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="sex" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="age" Type="int" Nullable="false" />
+    <Property Name="address" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="images" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Price" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Customer2_Customer">
+    <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
+    <End Role="Customer2" Type="Self.Customer2" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="cus_Id" />
+      </Principal>
+      <Dependent Role="Customer2">
+        <PropertyRef Name="Customer_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_Customer2">
+    <End Role="Customer2" Type="Self.Customer2" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer2">
+        <PropertyRef Name="Cus_Id2" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="cus_id2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_Customers">
+    <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="cus_Id" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="cus_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_details_details_Orders">
+    <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
+    <End Role="Order_details" Type="Self.Order_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Orders">
+        <PropertyRef Name="order_Id" />
+      </Principal>
+      <Dependent Role="Order_details">
+        <PropertyRef Name="orders_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_details_Pet">
+    <End Role="Pet" Type="Self.Pet" Multiplicity="1" />
+    <End Role="Order_details" Type="Self.Order_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pet">
+        <PropertyRef Name="Product_Id" />
+      </Principal>
+      <Dependent Role="Order_details">
+        <PropertyRef Name="Product_id2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_details_Product">
+    <End Role="Product" Type="Self.Product" Multiplicity="1" />
+    <End Role="Order_details" Type="Self.Order_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="product_Id" />
+      </Principal>
+      <Dependent Role="Order_details">
+        <PropertyRef Name="Product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_details_Tariners">
+    <End Role="Trainer" Type="Self.Trainer" Multiplicity="1" />
+    <End Role="Order_details" Type="Self.Order_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Trainer">
+        <PropertyRef Name="Product_Id" />
+      </Principal>
+      <Dependent Role="Order_details">
+        <PropertyRef Name="Product_id3" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_Pets">
+    <End Role="Pet" Type="Self.Pet" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pet">
+        <PropertyRef Name="Product_Id" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="Product_id2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_Products">
+    <End Role="Product" Type="Self.Product" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="product_Id" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="Product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_Tarinerss">
+    <End Role="Trainer" Type="Self.Trainer" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Trainer">
+        <PropertyRef Name="Product_Id" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="Product_id3" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pet_Customer">
+    <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
+    <End Role="Pet" Type="Self.Pet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="cus_Id" />
+      </Principal>
+      <Dependent Role="Pet">
+        <PropertyRef Name="Customer_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Popular_Pet">
+    <End Role="Pet" Type="Self.Pet" Multiplicity="1" />
+    <End Role="Popular" Type="Self.Popular" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pet">
+        <PropertyRef Name="Product_Id" />
+      </Principal>
+      <Dependent Role="Popular">
+        <PropertyRef Name="product_id2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Popular_Product">
+    <End Role="Product" Type="Self.Product" Multiplicity="1" />
+    <End Role="Popular" Type="Self.Popular" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="product_Id" />
+      </Principal>
+      <Dependent Role="Popular">
+        <PropertyRef Name="product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Popular_Tariners">
+    <End Role="Trainer" Type="Self.Trainer" Multiplicity="1" />
+    <End Role="Popular" Type="Self.Popular" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Trainer">
+        <PropertyRef Name="Product_Id" />
+      </Principal>
+      <Dependent Role="Popular">
+        <PropertyRef Name="product_id3" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_Customer">
+    <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="cus_Id" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="Customer_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Trainer_Customer">
+    <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
+    <End Role="Trainer" Type="Self.Trainer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="cus_Id" />
+      </Principal>
+      <Dependent Role="Trainer">
+        <PropertyRef Name="Customer_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PetteyModelStoreContainer">
+    <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customer2" EntityType="Self.Customer2" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Order_details" EntityType="Self.Order_details" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Pet" EntityType="Self.Pet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Popular" EntityType="Self.Popular" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Trainer" EntityType="Self.Trainer" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Customer2_Customer" Association="Self.FK_Customer2_Customer">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="Customer2" EntitySet="Customer2" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_Customer2" Association="Self.FK_Order_Customer2">
+      <End Role="Customer2" EntitySet="Customer2" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_Customers" Association="Self.FK_Order_Customers">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_details_details_Orders" Association="Self.FK_Order_details_details_Orders">
+      <End Role="Orders" EntitySet="Orders" />
+      <End Role="Order_details" EntitySet="Order_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_details_Pet" Association="Self.FK_Order_details_Pet">
+      <End Role="Pet" EntitySet="Pet" />
+      <End Role="Order_details" EntitySet="Order_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_details_Product" Association="Self.FK_Order_details_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="Order_details" EntitySet="Order_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_details_Tariners" Association="Self.FK_Order_details_Tariners">
+      <End Role="Trainer" EntitySet="Trainer" />
+      <End Role="Order_details" EntitySet="Order_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_Pets" Association="Self.FK_Order_Pets">
+      <End Role="Pet" EntitySet="Pet" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_Products" Association="Self.FK_Order_Products">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_Tarinerss" Association="Self.FK_Order_Tarinerss">
+      <End Role="Trainer" EntitySet="Trainer" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pet_Customer" Association="Self.FK_Pet_Customer">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="Pet" EntitySet="Pet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Popular_Pet" Association="Self.FK_Popular_Pet">
+      <End Role="Pet" EntitySet="Pet" />
+      <End Role="Popular" EntitySet="Popular" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Popular_Product" Association="Self.FK_Popular_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="Popular" EntitySet="Popular" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Popular_Tariners" Association="Self.FK_Popular_Tariners">
+      <End Role="Trainer" EntitySet="Trainer" />
+      <End Role="Popular" EntitySet="Popular" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_Customer" Association="Self.FK_Product_Customer">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Trainer_Customer" Association="Self.FK_Trainer_Customer">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="Trainer" EntitySet="Trainer" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

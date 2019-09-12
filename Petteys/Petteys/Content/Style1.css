@@ -1,0 +1,24 @@
+﻿
+    .fixed{
+    display: block;
+    width: 100%;
+    height: 200px;
+    background: #440000;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    color: #FFF;
+    padding: 0px;
+    margin: 0px;
+    opacity: 0;
+}
+
+.contents{
+    background: #005511;
+    display: inline-block;
+    width: 100%;
+    height: 2000px;
+    text-align: right;
+    color: #FFF;
+}
+

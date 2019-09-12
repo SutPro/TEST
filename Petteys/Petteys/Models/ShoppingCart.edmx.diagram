@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7bedd6376728413aac6ba3a6c82d221e" Name="Diagram1">
+        <EntityTypeShape EntityType="PetteyModel.Pet" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="PetteyModel.Popular" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PetteyModel.Product" Width="1.5" PointX="0.75" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PetteyModel.Trainer" Width="1.5" PointX="0.75" PointY="9.875" IsExpanded="true" />
+        <AssociationConnector Association="PetteyModel.FK_Popular_Pet" ManuallyRouted="false" />
+        <AssociationConnector Association="PetteyModel.FK_Popular_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="PetteyModel.FK_Popular_Tariners" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="PetteyModel.Customer" Width="1.5" PointX="5.5" PointY="9.375" />
+        <EntityTypeShape EntityType="PetteyModel.Customer2" Width="1.5" PointX="7" PointY="19.125" />
+        <EntityTypeShape EntityType="PetteyModel.Order_details" Width="1.5" PointX="11.5" PointY="10" />
+        <EntityTypeShape EntityType="PetteyModel.Orders" Width="1.5" PointX="9.25" PointY="11.25" />
+        <AssociationConnector Association="PetteyModel.FK_Customer2_Customer" />
+        <AssociationConnector Association="PetteyModel.FK_Order_Customers" />
+        <AssociationConnector Association="PetteyModel.FK_Pet_Customer" />
+        <AssociationConnector Association="PetteyModel.FK_Product_Customer" />
+        <AssociationConnector Association="PetteyModel.FK_Trainer_Customer" />
+        <AssociationConnector Association="PetteyModel.FK_Order_Customer2" />
+        <AssociationConnector Association="PetteyModel.FK_Order_details_details_Orders" />
+        <AssociationConnector Association="PetteyModel.FK_Order_details_Pet" />
+        <AssociationConnector Association="PetteyModel.FK_Order_details_Product" />
+        <AssociationConnector Association="PetteyModel.FK_Order_details_Tariners" />
+        <AssociationConnector Association="PetteyModel.FK_Order_Pets" />
+        <AssociationConnector Association="PetteyModel.FK_Order_Products" />
+        <AssociationConnector Association="PetteyModel.FK_Order_Tarinerss" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
