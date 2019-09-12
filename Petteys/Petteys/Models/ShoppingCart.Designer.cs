@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\EAK_FORORIDA\documents\visual studio 2015\Projects\Petteys\Petteys\Models\ShoppingCart.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\B6070\Desktop\Petey\TEST\Petteys\Petteys\Models\ShoppingCart.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
