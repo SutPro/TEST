@@ -335,7 +335,7 @@
     <Content Include="Views\Product\UpdatePic1.cshtml" />
     <Content Include="Views\Trainner\Index.cshtml" />
     <Content Include="Views\Trainner\UpdatePic1.cshtml" />
-    <Content Include="Views\Account\Index.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Account\resetpassword1.cshtml" />
     <Content Include="Views\Account\resetpassword2.cshtml" />
