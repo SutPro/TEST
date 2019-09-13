@@ -55,15 +55,12 @@
                         &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
                         &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
                         &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;*@
-                        <form class="form-inline my-5 my-lg-0">
-                            <button class="btn btn-dark my-5 my-sm-0" type="submit">
-                                เข้าสู่ระบบ
-                            </button>
-                            &nbsp;&nbsp;
-                            <button class="btn btn-dark my-5 my-sm-0" type="submit">
-                                สมัครสมาชิก
-                            </button>
-                        </form>
+                     @Html.ActionLink("เข้าสู่ระบบ", "Login", "AccountController",
+                                 new { @class = "btn btn-dark " });
+
+                    &nbsp;
+                    @Html.ActionLink("สมัครสมาชิก", "registers", "AccountController",
+                                 new { @class = "btn btn-dark " });
                 </ul>
             </div>
         </nav>
